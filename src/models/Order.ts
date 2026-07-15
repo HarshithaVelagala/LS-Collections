@@ -68,5 +68,6 @@ const OrderSchema = new Schema<IOrder>({
   createdAt: { type: Date, default: Date.now },
 });
 
-const Order: Model<IOrder> = mongoose.models.Order || mongoose.model<IOrder>("Order", OrderSchema);
+import { mockOrderModel } from "@/lib/mockDb";
+const Order: any = mockOrderModel;
 export default Order;

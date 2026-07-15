@@ -85,6 +85,7 @@ export default function SearchBar({ iconClassName }: { iconClassName?: string })
           placeholder="Search collection..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          suppressHydrationWarning
           className="w-full h-10 bg-[#F7F7F7] border border-[#ECECEC] text-foreground rounded-full px-5 text-sm focus:outline-none focus:border-[#C89B6D] focus:ring-1 focus:ring-[#C89B6D]/30 mr-2 transition-all duration-[250ms] ease-in-out placeholder:text-zinc-400"
         />
       </form>
@@ -93,6 +94,7 @@ export default function SearchBar({ iconClassName }: { iconClassName?: string })
         variant="ghost" 
         size="icon" 
         onClick={handleToggle}
+        suppressHydrationWarning
         className={iconClassName || "text-foreground hover:text-[#C89B6D] hover:bg-transparent flex items-center justify-center transition-colors duration-[250ms]"}
       >
         <Search className="h-5 w-5" />

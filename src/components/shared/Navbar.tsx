@@ -35,7 +35,6 @@ export default function Navbar() {
   }, [isLandingPage]);
 
   const navLinks = [
-    { name: "Home", href: "/" },
     { name: "Sarees", href: "/sarees", hasDropdown: true },
     { name: "Jewellery", href: "/jewellery", hasDropdown: true },
     { name: "About Us", href: "/about" },

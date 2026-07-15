@@ -160,5 +160,6 @@ const ProductSchema = new Schema<IProduct>({
   createdAt: { type: Date, default: Date.now },
 });
 
-const Product: Model<IProduct> = mongoose.models.Product || mongoose.model<IProduct>("Product", ProductSchema);
+import { mockProductModel } from "@/lib/mockDb";
+const Product: any = mockProductModel;
 export default Product;

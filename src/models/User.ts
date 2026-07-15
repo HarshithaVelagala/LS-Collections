@@ -49,5 +49,6 @@ const UserSchema = new Schema<IUser>({
   updatedAt: { type: Date, default: Date.now },
 });
 
-const User: Model<IUser> = mongoose.models.User || mongoose.model<IUser>("User", UserSchema);
+import { mockUserModel } from "@/lib/mockDb";
+const User: any = mockUserModel;
 export default User;

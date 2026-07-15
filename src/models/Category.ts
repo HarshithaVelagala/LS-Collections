@@ -16,5 +16,6 @@ const CategorySchema = new Schema<ICategory>({
   createdAt: { type: Date, default: Date.now },
 });
 
-const Category: Model<ICategory> = mongoose.models.Category || mongoose.model<ICategory>("Category", CategorySchema);
+import { mockCategoryModel } from "@/lib/mockDb";
+const Category: any = mockCategoryModel;
 export default Category;
